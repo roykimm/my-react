@@ -1,0 +1,46 @@
+h1 {
+    font-size : 80px;
+    margin-left: 180px;
+    margin-top: 200px;
+    margin-bottom : 20px;
+}
+
+h1 span:nth-child(2){
+    color : red;
+}
+
+h1 span:nth-child(3){
+    color : yellow;
+}
+
+h1 span:nth-child(4){
+    color : gold;
+}
+
+h1 span:nth-child(5){
+    color : hotpink;
+}
+h1 span:nth-child(6){
+    color : khaki;
+}
+
+input {
+    padding : 5px;
+    border-radius: 8px;
+    width : 320px;
+    border : 1px solid lightgray;
+    margin-left: 135px;
+}
+
+.bottom {
+    margin-top: 15px;
+}
+.bottom button  {
+    padding : 5px;
+    border : 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.bottom button:nth-child(1){
+    margin-left: 220px;
+}
