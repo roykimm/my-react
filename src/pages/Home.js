@@ -5,10 +5,6 @@ function Home() {
     return (
         <>
         <style type="text/css">
-            {`
-                .con {
-                }
-            `}
         </style>
 
         <Container className="con">
@@ -17,6 +13,7 @@ function Home() {
                 <Col>
                     <li><a href="/page1">메모장</a></li>
                     <li><a href="/page2">page2</a></li>
+                    <li><a href="/filetest">fileupload test with django server</a></li>
                 </Col>
             </Row>
         </Container>

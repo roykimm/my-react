@@ -1,0 +1,23 @@
+body{
+    background-color: lightgray;
+    display : flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+main {
+    display: block;
+}
+
+form {
+    display: block;
+    margin-top : 0em;
+}
+
+.form-signin {
+    width : 100%;
+    max-width: 330px;
+    padding : 15px;
+    margin: auto;
+}
