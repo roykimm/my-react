@@ -1,4 +1,4 @@
-import React , { useState , useEffect }from 'react'
+import React , { useState , useEffect } from 'react'
 
 function FileTest() {
 
@@ -10,7 +10,7 @@ function FileTest() {
         uploadData.append('title', title);
         uploadData.append('cover', cover, cover.name);
 
-        fetch('http://127.0.0.1:8000/api/books/', 
+        fetch('http://gobella.ml/api/books/', 
             {
                 method : 'POST',
                 body: uploadData,
