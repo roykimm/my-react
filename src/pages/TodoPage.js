@@ -1,7 +1,7 @@
 import React from 'react'
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
-import '../css/todo.css'
+
 
 function TodoPage() {
     return (

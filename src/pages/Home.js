@@ -48,6 +48,14 @@ function Home() {
                             <a href="/todopage" class="card-link">Card link</a>
                         </div>
                     </div>    
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Django Todolist</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Todo list</h6>
+                            <p class="card-text">Django TODO app</p>
+                            <a href="/djangotodo" class="card-link">Card link</a>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>
