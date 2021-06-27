@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route , BrowserRouter, Switch } from 'react-router-dom';
-import { Page1, Page2, Home , FileTest, TodoPage, DjangoTodo} from './pages';
+import { Page1, Page2, Home , FileTest, TodoPage, DjangoTodo, Chat} from './pages';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/todo.css';
 
@@ -16,6 +16,7 @@ function App() {
         <Route path="/filetest" component={FileTest} />
         <Route path="/todopage" component={TodoPage} />
         <Route path="/djangotodo" component={DjangoTodo} />
+        <Route path="/chat" component={Chat} />
       </BrowserRouter>
     </div>
   );

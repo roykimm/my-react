@@ -2,9 +2,10 @@ import axios from 'axios';
 import React, { Component } from 'react'
 import '../css/App.css';
 import CustomModal from './todocomponents/Modal';
-
+import hostName from '../host';
 
 export class DjangoTodo extends Component {
+    
     constructor(props){
         super(props);
         this.state = {
@@ -26,7 +27,7 @@ export class DjangoTodo extends Component {
 
     refreshList = () => {
         axios
-            .get("http://localhost:8000/api/tasks/")
+            .get(`${hostName}/api/tasks/`)
             .then(res => this.setState({ todoList : res.data }))
             .catch(err => console.log(err))
     }
@@ -41,18 +42,18 @@ export class DjangoTodo extends Component {
         this.toggle();
         if(item.id) {
             axios
-                .put(`http://localhost:8000/api/tasks/${item.id}/`, item)
+                .put(`${hostName}/api/tasks/${item.id}/`, item)
                 .then(res => this.refreshList())
         }
         axios
-            .post("http://localhost:8000/api/tasks/", item)
+            .post(`${hostName}/api/tasks/`, item)
             .then(res => this.refreshList())
 
     }
 
     handleDelete = (item) => {
         axios
-            .delete(`http://localhost:8000/api/tasks/${item.id}/`)
+            .delete(`${hostName}/api/tasks/${item.id}/`)
             .then(res => this.refreshList());
     }
 
@@ -108,8 +109,8 @@ export class DjangoTodo extends Component {
                     {item.title}
                 </span>
                 <span>
-                    <button className="btn btn-info mr-2" onClick={this.editItem}>Edit</button>
-                    <button className="btn btn-danger mr-2">Delete</button>
+                    <button className="btn btn-info mr-2" onClick={() => this.editItem(item)}>Edit</button>
+                    <button className="btn btn-danger mr-2" onClick={() => this.handleDelete(item)}>Delete</button>
                 </span>
             </li>
         ))

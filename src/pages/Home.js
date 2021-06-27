@@ -56,6 +56,14 @@ function Home() {
                             <a href="/djangotodo" class="card-link">Card link</a>
                         </div>
                     </div>  
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">채팅 어플리케이션</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">chat</h6>
+                            <p class="card-text">chat</p>
+                            <a href="/chat" class="card-link">link</a>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>
