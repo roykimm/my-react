@@ -4,4 +4,5 @@ export { default as Home } from './Home';
 export { default as FileTest} from './FileTest';
 export { default as TodoPage } from './TodoPage';
 export { default as DjangoTodo} from './DjangoTodo'
-export { default as Chat} from './Chat'
+export { default as Chat} from './Chat';
+export { default as Note } from './Note';

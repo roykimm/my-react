@@ -64,6 +64,14 @@ function Home() {
                             <a href="/chat" class="card-link">link</a>
                         </div>
                     </div>  
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">노트</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Note</h6>
+                            <p class="card-text">Note</p>
+                            <a href="/note" class="card-link">link</a>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>
