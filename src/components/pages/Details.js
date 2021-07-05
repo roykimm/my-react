@@ -49,13 +49,53 @@ export class Details extends Component {
                             </div>
                             {/* Nav Links */}
                             <div className="container">
-                                <ul className="nav nav-tabs">
+                                <ul className="nav nav-tabs" role="tablist">
+                                    {/* About Place Link */}
                                     <li className="nav-item">
-                                        <a href="" className="nav-link active"></a>
+                                        <a href="#aboutPlace" 
+                                            className="nav-link active"
+                                            role="tab"
+                                            data-toggle="tab">
+                                            About Place
+                                        </a>
+                                    </li>
+                                    {/* Reviews Link */}
+                                    <li className="nav-item">
+                                        <a href="#reviews" 
+                                            className="nav-link "
+                                            role="tab"
+                                            data-toggle="tab">
+                                            Reviews
+                                        </a>
+                                    </li>
+                                    {/* Map Link */}
+                                    <li className="nav-item">
+                                        <a href="#map" 
+                                            className="nav-link "
+                                            role="tab"
+                                            data-toggle="tab">
+                                            Map
+                                        </a>
                                     </li>
                                 </ul>
+                                {/* Tab Pane */}
+                                <div className="tab-content mb-5">
+                                    {/* About Place Tab */}
+                                    <div id="aboutPlace" className="tab-pane in active text-center mt-5" role="tabpanel">
+                                        <h2 className="mb-3">{title}</h2>
+                                        <p>{description}</p>
+                                        <img src={img} alt={title} className="img-thumbnail img-fluid" />
+                                    </div>
+                                    {/* Reviews */}
+                                    <div className="tab-pane" id="reviews" role="tabpanel">
+                                        Reviews Content
+                                    </div>
+                                    {/* Map */}
+                                    <div className="tab-pane" id="map" role="tabpanel">
+                                        <iframe src={maps} style={{border : '0', height: '28.125.rem', width:'100%', frameborder: '0' }}></iframe>
+                                    </div>
+                                </div>
                             </div>
-
                         </React.Fragment>
                     );
                 }}
