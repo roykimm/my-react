@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { InfoConsumer } from '../context'
+import styled from 'styled-components';
 
 export class Details extends Component {
     render() {
@@ -19,7 +20,7 @@ export class Details extends Component {
 
                     return (
                         <React.Fragment>
-                            <div className="container-fluid align-items-center">
+                            <HeaderDetails className="container-fluid align-items-center">
                                 <h1 className="display-1 font-weight-bold">{headerTitle}</h1>
                                 <h4 className="display-5">{headerSubTitle}</h4>
                                 <p>{headerText}</p>
@@ -46,53 +47,42 @@ export class Details extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            {/* Nav Links */}
+                            </HeaderDetails>
+                            {/* Nav */}
                             <div className="container">
-                                <ul className="nav nav-tabs" role="tablist">
-                                    {/* About Place Link */}
-                                    <li className="nav-item">
-                                        <a href="#aboutPlace" 
-                                            className="nav-link active"
-                                            role="tab"
-                                            data-toggle="tab">
-                                            About Place
-                                        </a>
+                                {/* Nav Links */}
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="aboutPlace-tab" data-bs-toggle="tab" data-bs-target="#aboutPlace" type="button" role="tab" aria-controls="aboutPlace" aria-selected="true">aboutPlace</button>
                                     </li>
-                                    {/* Reviews Link */}
-                                    <li className="nav-item">
-                                        <a href="#reviews" 
-                                            className="nav-link "
-                                            role="tab"
-                                            data-toggle="tab">
-                                            Reviews
-                                        </a>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">reviews</button>
                                     </li>
-                                    {/* Map Link */}
-                                    <li className="nav-item">
-                                        <a href="#map" 
-                                            className="nav-link "
-                                            role="tab"
-                                            data-toggle="tab">
-                                            Map
-                                        </a>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="false">map</button>
                                     </li>
                                 </ul>
                                 {/* Tab Pane */}
-                                <div className="tab-content mb-5">
-                                    {/* About Place Tab */}
-                                    <div id="aboutPlace" className="tab-pane in active text-center mt-5" role="tabpanel">
-                                        <h2 className="mb-3">{title}</h2>
-                                        <p>{description}</p>
-                                        <img src={img} alt={title} className="img-thumbnail img-fluid" />
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="aboutPlace" role="tabpanel" aria-labelledby="aboutPlace-tab">
+                                        <div className="tab-pane fade show active" id="aboutPlace" role="tabpanel" aria-labelledby="aboutPlace">
+                                            <h2 className="mb-3">{title}</h2>
+                                            <p>{description}</p>
+                                            <img src={img} alt={title} className="img-thumbnail img-fluid" />
+                                        </div>
                                     </div>
-                                    {/* Reviews */}
-                                    <div className="tab-pane" id="reviews" role="tabpanel">
+                                    <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                                         Reviews Content
                                     </div>
-                                    {/* Map */}
-                                    <div className="tab-pane" id="map" role="tabpanel">
-                                        <iframe src={maps} style={{border : '0', height: '28.125.rem', width:'100%', frameborder: '0' }}></iframe>
+                                    <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
+                                        <iframe src={maps} 
+                                            style = {{
+                                                border:'0',
+                                                height:'28rem',
+                                                width:'100%',
+                                                frameborder: '0'
+                                            }}>
+                                        </iframe>
                                     </div>
                                 </div>
                             </div>
@@ -105,3 +95,27 @@ export class Details extends Component {
 }
 
 export default Details
+
+const HeaderDetails = styled.header`
+    background : linear-gradient(rgba(109,109,109), rgba(255,255,255));
+    height : 100vh;
+    text-transform: uppercase;
+    color : var(--mainWhite);
+    text-align: center;
+
+    h1 {
+        padding-top : 10%;
+        color : var(--mainDark);
+    }
+
+    h4 {
+        color : var(--mainDark);
+    }
+
+    p {
+        padding-left : 10%;
+        padding-right : 10%;
+        margin-bottom : 10%;
+        color : var(--mainDark);
+    }
+`;
