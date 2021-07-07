@@ -24,6 +24,7 @@ export class Info extends Component {
                                 <h5 className="card-title">{headerSubTitle}</h5>
                                 <p className="card-text">{headerText}</p>
                                 <Link
+                                    onClick={() => value.handleDetail(id)}
                                     to="/app2/details"
                                     className="btn btn-outline-success text-uppercase"
                                 >

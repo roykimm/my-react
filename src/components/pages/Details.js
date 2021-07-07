@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { InfoConsumer } from '../context'
 import styled from 'styled-components';
+import Reviews from '../Reviews';
 
 export class Details extends Component {
     render() {
@@ -72,7 +73,7 @@ export class Details extends Component {
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-                                        Reviews Content
+                                        <Reviews />
                                     </div>
                                     <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="map-tab">
                                         <iframe src={maps} 
@@ -117,5 +118,25 @@ const HeaderDetails = styled.header`
         padding-right : 10%;
         margin-bottom : 10%;
         color : var(--mainDark);
+    }
+    
+    i {
+        font-size : 1.875rem;
+        color : var(--mainDark);
+    }
+
+    i:hover {
+        color : var(--mainBlue);
+        cursor : pointer;
+    }
+
+    .nav-item {
+        height : 18.75rem;
+    }
+
+    @media(max-width: 760px) {
+        h1, h4 {
+            color : var(--mainWhite);
+        }
     }
 `;
