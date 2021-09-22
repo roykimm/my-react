@@ -6,7 +6,8 @@ import uuid from 'react-uuid';
 
 function Note() {
 
-    const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
+    //const [notes, setNotes] = useState(JSON.parse(localStorage.notes) || []);
+    const [notes, setNotes] = useState([]);
     const [activeNote, setActiveNote] = useState(false);
 
     useEffect(() => {
